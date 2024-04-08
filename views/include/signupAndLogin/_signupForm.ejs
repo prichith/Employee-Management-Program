@@ -1,0 +1,43 @@
+<!-- signup form -->
+<div class="form signup" id="signupPage">
+    <header>Signup</header>
+    <form id="signupForm" class="signupForm">
+    <!-- <form action="/api/users" method="POST" id="signupForm" class="signupForm"> -->
+        <input id="signupFullName" class="textColor"  type="text" placeholder="Full name" required name="signupFullname"/>
+        <input id="signupEmail" class="textColor"  type="text" placeholder="Email address" required name="signupEmail" />
+        <div class="password">
+            <input id="signupPassword" class="textColor" type="password" placeholder="Password" required name="signupPassword"/>
+            <input id="check" type="checkbox" onclick="showPassword('signupPassword')" />
+            <label for="check"><i class="fa-regular fa-eye"></i></label>                  
+        </div>
+        <input id="signupNextBtn"  type="submit" value="Signup" />
+    </form>
+</div>
+<!-- END Signup form -->
+        
+<!-- OTP verification -->
+<div class="otpsection">
+    <header class="otpheader">
+        <span class="material-symbols-outlined">verified_user</span>
+    </header> 
+    <div class="otp">
+        <h4>Enter OTP Code</h4>
+        <!-- <form id="otpform" class="otpForm"> -->
+        <form action="/api/user/otp" method="POST" id="otpform" class="otpForm">
+            <div class="input-field">
+                <input class="otpnumber" type="number" name="otp1" />
+                <input class="otpnumber" type="number" disabled name="otp2"/>
+                <input class="otpnumber" type="number" disabled name="otp3" />
+                <input class="otpnumber" id="lastOTPNum" type="number" disabled name="otp4" />
+            </div>
+            <button id="otpBtn" type="submit" onclick="signUpForm(),movetologin()">Verify OTP</button>
+        </form>             
+    </div>
+</div>
+<!-- end OTP verification -->
+
+<!-- modal -->
+
+<div id="modal" class="addEmployeeSuccessful">
+    <p id="successMessage"> message </p>
+</div>

@@ -1,0 +1,296 @@
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0faff;
+}
+:root{
+    --primary-color: #4070f4;
+}
+.wrapper{
+    position: relative;
+    max-width: 470px;
+    width: 100%;
+    border-radius: 12px;
+    padding-left: 20px 30px 120px;
+    background: var(--primary-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 30px;
+    height: 600px;
+    margin-top: 40px;
+}
+.form.login{
+    position: absolute;
+    left: 50%;
+    bottom: -86%;
+    transform: translateX(-50%);
+    width: calc(100%+220px);
+    padding: 20px 140px;
+    border-radius: 50%;
+    height: 100%;
+    background: #fff;
+    transition: all 0.6s ease;
+}
+.wrapper.active
+    .form.login{
+        bottom: -15%;
+        border-radius: 16%;
+        box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    }
+.form
+    header{
+        font-size: 35px;
+        text-align: center;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+.form.login
+    header{
+        color: #333;
+        opacity: 0.6;
+    }
+.wrapper.active
+    .form.login
+    header{
+        opacity: 1;
+    }
+.wrapper.active
+    .signup
+    header{
+        opacity: 0.6;
+    }
+.wrapper
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    form
+        input{
+            height: 60px;
+            outline: none;
+            border: none;
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #333;
+            border-radius: 8px;
+            background: #fff;
+        }
+.form.login
+    input{
+        border: 1px solid #aaa;
+    }
+.form.login
+    input:focus{
+        box-shadow: 0 1px 0 #ddd;
+    }
+form
+    .checkbox{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+.checkbox
+    input[type="checkbox"]{
+        height: 16px;
+        width: 16px;
+        accent-color: #fff;
+        cursor: pointer;
+    }
+form
+    .checkbox
+    label{
+        cursor: pointer;
+        color: #fff;
+    }
+form a{
+    color: #333;
+    text-decoration: none;
+}
+form
+    a:hover{
+        text-decoration: underline;
+    }
+form
+    input[type="submit"]{
+        margin-top: 15px;
+        padding: none;
+        font-size: 19px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+.form.login
+    input[type="submit"]{
+        background: var(--primary-color);
+        color: #fff;
+        border: none;
+    }
+.password{
+    display: flex;
+    position: relative;
+}
+#loginPassword{
+    flex: 1;
+    /* padding-right: 40px; */
+}
+#password{
+    flex: 1;
+    padding-right: 40px;
+    /*  */
+    position: absolute;
+    width: 100%;
+    /*  */
+}
+.password i{
+    color: var(--primary-color);
+    cursor: pointer;
+    font-weight: 600;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+}
+.password label{
+    display: flex;
+    align-items: center;
+}
+#check{
+    display: none;
+}
+.loginPassword{
+    display: flex;
+    position: relative;
+}
+#loginCheck{
+    display: none;
+}
+.loginPassword label{
+    display: flex;
+    align-items: center;
+}
+.loginPassword i{
+    color: var(--primary-color);
+    cursor: pointer;
+    font-weight: 600;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+}
+.textColor{
+    color: var(--primary-color) !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.28px;
+    font-family: 'DM Sans', sans-serif;
+}
+/* .signupForm{ */
+    /* display: none !important; */
+     /* Hide signup form */
+ /* }  */
+
+
+/* OTP SECTION */
+.otpsection{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 25px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    margin-top: 40px;
+    display: none;
+}
+.otpheader{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background: var(--primary-color);
+    position: relative;
+}
+.otpheader span{
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    font-size: 50px;
+    color: #fff;
+}
+.input-field{
+    gap: 10px;
+    display: flex;
+}
+.input-field input{
+    border: 1px solid black;
+    width: 30px;
+    height:30px;
+    color: black;
+    padding: 9px;
+    color: var(--primary-color);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+
+}
+.otp h4{
+    text-align: center;
+    font-size: 20px;
+}
+.otpForm button{
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+.input-field input::-webkit-inner-spin-button,
+.input-field input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+.activeOTPBtn{
+    opacity: 1 !important;
+}
+/* END OTP SECTION*/
+.addEmployeeSuccessful p{
+    color: #FFF;
+    font-size: 14px;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+.addEmployeeSuccessful{
+    width: 310px;
+    height: 35px;
+    background-color: #3ea31a;
+    position: fixed;
+    top: 10px;
+    left: 550px;
+    border-radius: 50px;
+    padding-top: 8px;
+    text-align: center;
+    display: none;
+}
+#signupPassword{
+    width:100%
+}
+#signupNextBtn{
+    color: var(--primary-color);
+}

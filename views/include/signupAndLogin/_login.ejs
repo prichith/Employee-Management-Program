@@ -1,0 +1,14 @@
+<!-- Login page -->
+<div class="form login">
+    <header>Login</header>
+    <!-- <form id="loginForm"> -->
+    <form id="loginForm" action="/api/userlogin" method="POST">
+        <input id="loginEmail" class="textColor" type="text" placeholder="Email address" required name="email"/>
+        <div class="loginPassword" id="loginPasswordSec">
+            <input class="textColor" id="loginPassword" type="password" placeholder="Password" required name="password"/>
+            <input id="loginCheck" type="checkbox" onclick="showPassword('loginPassword')" />
+            <label for="loginCheck"><i class="fa-regular fa-eye"></i></label>                 
+        </div>
+        <input type="submit" value="Login" />
+    </form>
+</div>

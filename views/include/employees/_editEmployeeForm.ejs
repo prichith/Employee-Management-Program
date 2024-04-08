@@ -1,0 +1,338 @@
+<div
+  id="editEmployeeForm"
+  style="display: none"
+  class="container p-4 row-sm-12 details det-width temp-border edit-employee-form fadeIn"
+>
+  <div
+    class="d-flex align-items-center edit-employee-head justify-content-between"
+  >
+    <h3>Edit Employee</h3>
+    <i id="editEmployeeClose" class="fa-solid fa-xmark"></i>
+  </div>
+  <!-- form -->
+  <form>
+    <div class="dp-change d-flex align-items-center gap-3">
+      <div class="photo"><img id="editEmployeeDp" class="employee-img" /></div>
+      <label for="changedp" class="change-btn">
+        change
+        <input name="avatar" id="changedp" type="file" />
+      </label>
+    </div>
+
+    <div class="row pt-3">
+      <div class="col-sm-12 col-md-2 col-lg-2">
+        <label class="labels" for="editSalutation"
+          ><span id="valEditSal" class="validation"
+            >This field is required </span
+          >Salutation</label
+        >
+        <select
+          name="salutation"
+          id="editSalutation"
+          class="form-select text-color color"
+          aria-label="Default select example"
+        >
+          <option value="" selected>select</option>
+          <option value="Mr.">Mr</option>
+          <option value="Ms.">Ms</option>
+          <option value="Mrs.">Mrs</option>
+          <option value="Dr.">Dr</option>
+        </select>
+      </div>
+
+      <div class="col-sm-6 col-md-5 col-lg-5 firstName">
+        <label class="labels" for="editFirstName"
+          ><span id="valEditFN" class="validation">This field is required </span
+          >First Name</label
+        >
+        <div class="input-group flex-nowrap">
+          <input
+            name="firstname"
+            onkeyup="removeValMessage('editFirstName','valEditFN')"
+            id="editFirstName"
+            type="text"
+            class="form-control color"
+            placeholder="Prichith"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-5 col-lg-5 lastName">
+        <label class="labels" for="editLastName"
+          ><span id="valEditLN" class="validation">This field is required </span
+          >Last Name</label
+        >
+        <div class="input-group flex-nowrap">
+          <input
+            name="lastname"
+            onkeyup="removeValMessage('editLastName','valEditLN') "
+            id="editLastName"
+            type="text"
+            class="form-control color"
+            placeholder="C P"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-3">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editUsername"
+          ><span id="valEditUN" class="validation">This field is required </span
+          >User Name</label
+        >
+        <div class="input-group flex-nowrap">
+          <input
+            name="username"
+            onkeyup="removeValMessage('editUsername','valEditUN') "
+            id="editUsername"
+            type="text"
+            class="form-control color"
+            placeholder="Enter user name"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-lg-6 mobile">
+        <label class="labels" for="editPassword"
+          ><span id="valEditPass" class="validation"
+            >This field is required </span
+          >Password</label
+        >
+        <div class="input-group flex-nowrap">
+          <input
+            name="password"
+            onkeyup="removeValMessage('editPassword','valEditPass')"
+            id="editPassword"
+            type="password"
+            class="form-control color"
+            placeholder="enter password"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-3">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editEmail"
+          ><span id="valEditEmail" class="validation"
+            >This field is required </span
+          >Email Address</label
+        >
+        <div class="input-group flex-nowrap">
+          <input
+            name="email"
+            onkeyup="removeValMessage('editEmail','valEditEmail')"
+            id="editEmail"
+            type="email"
+            class="form-control color"
+            placeholder="prichith@gmail.com"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-lg-6 mobile">
+        <label class="labels" for="editPhone"
+          ><span id="valEditMob" class="validation"
+            >This field is required </span
+          >Mobile Number</label
+        >
+        <div class="input-group flex-nowrap">
+          <input
+            name="phone"
+            id="editPhone"
+            type="number"
+            class="form-control color"
+            placeholder="enter mobile number"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-3">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editDob"
+          ><span id="valEditDob" class="validation"
+            >This field is required </span
+          >Date of Birth</label
+        >
+        <div class="input-group flex-nowrap">
+          <input
+            name="dob"
+            id="editDob"
+            type="date"
+            class="form-control color date"
+            placeholder="select date of birth"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-lg-6 genderEditForm">
+        <label class="labels"
+          ><span id="valEditGender" class="validation"
+            >This field is required </span
+          >Gender</label
+        >
+        <div class="pt-2" for="valEditGender">
+          <div class="form-check form-check-inline">
+            <input
+              name="gender"
+              class="form-check-input gender-col gender-radio"
+              type="radio"
+              name="gender"
+              id="editMale"
+              value="Male"
+            />
+            <label class="form-check-label" for="editMale">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              name="gender"
+              class="form-check-input gender-radio"
+              type="radio"
+              name="gender"
+              id="editFemale"
+              value="Female"
+            />
+            <label class="form-check-label" for="editFemale">Female</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-3">
+      <div class="col-md-12 col-lg-12">
+        <label for="editQualifications">Qualifications</label>
+        <input
+          name="qualifications"
+          id="editQualifications"
+          type="text"
+          class="form-control color"
+          placeholder="enter qualifications"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+    </div>
+
+    <div class="row pt-3">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <label for="editAddress" class="labels"
+          ><span id="valEditAddress" class="validation"
+            >This field is required </span
+          >Address</label
+        >
+        <div class="input-group flex-nowrap">
+          <input
+            name="address"
+            onkeyup="removeValMessage('editAddress','valEditAddress')"
+            id="editAddress"
+            type="text"
+            class="form-control color"
+            placeholder="enter address"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-3">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editCountry"
+          ><span id="valEditCountry" class="validation"
+            >This field is required </span
+          >Country</label
+        >
+        <select
+          name="country"
+          id="editCountry"
+          class="form-select text-color color"
+          aria-label="Default select example"
+        >
+          <option value="" selected>select country</option>
+          <option value="India">India</option>
+          <option value="USA">USA</option>
+          <option value="Australia">Australia</option>
+          <option value="UAE">UAE</option>
+        </select>
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-lg-6 state">
+        <label class="labels" for="editState"
+          ><span id="valEditState" class="validation"
+            >This field is required </span
+          >State</label
+        >
+        <select
+          name="state"
+          id="editState"
+          class="form-select text-color color"
+          aria-label="Default select example"
+        >
+          <option value="" selected>select state</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Tamil nadu">Tamil nadu</option>
+          <option value="karnataka">karnataka</option>
+          <option value="maharashtra">maharashtra</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row pt-3">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editCity"
+          ><span id="valEditCity" class="validation"
+            >This field is required </span
+          >City</label
+        >
+        <div class="input-group flex-nowrap">
+          <input
+            name="city"
+            onkeyup="removeValMessage('editCity','valEditCity')"
+            id="editCity"
+            type="text"
+            class="form-control color"
+            placeholder="enter city"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-3 px-4 buttons-div">
+      <div class="gap-2 d-md-flex justify-content-md-end buttons">
+        <button
+          id="editEmployeeCancel"
+          class="btn me-md-2 cancel button"
+          type="button"
+        >
+          Cancel
+        </button>
+        <button
+          onclick="editEmployeeValidation()"
+          id="editEmployeeSave"
+          class="btn btn-primary add-employee button px-4"
+          type="button"
+        >
+          Save Changes
+        </button>
+      </div>
+    </div>
+  </form>
+  <!-- end form -->
+</div>

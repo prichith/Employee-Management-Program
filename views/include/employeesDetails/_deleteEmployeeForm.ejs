@@ -1,0 +1,13 @@
+<div id="employeeDetDeleteForm" class="DeleteFormContainer mt-10 p-4 col-sm-12 col-md-6 col-lg-6 details deteteEmployee-width">
+    <div class="d-flex align-items-center deleteEmployeeHead justify-content-between">
+        <h3>Edit Employee</h3>
+        <i onclick="edDelClose()" id="deleteEmployeeClose" class="fa-solid fa-xmark"></i>
+    </div>
+    <h6 class="delete-employee">Are you sure you want to delete this employee?</h6>                        
+    <div class="row pt-3 px-4">
+        <div class="gap-2 d-md-flex justify-content-end deleteFormButtons">
+            <button onclick="edDelCancel()" id="deleteEmployeeCancel" class="btn me-md-2 order-unset button" type="button">Cancel</button>
+            <button onclick="edDelete()" id="deleteEmployeeDelete" class="btn button px-4 delete-btn" type="button">Delete</button>
+        </div>
+    </div>
+</div>

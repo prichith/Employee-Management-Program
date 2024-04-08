@@ -1,0 +1,147 @@
+<div id="ed-editEmployeeForm" class="container p-4 row-sm-12 details det-width temp-border employee-details-edit-employee-form fadeIn">
+    <div class="d-flex align-items-center edit-employee-head justify-content-between">
+        <h3>Edit Employee</h3>
+        <i onclick="EdFormClose()" id="ed-editEmployeeClose" class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="dp-change d-flex align-items-center gap-3">
+        <div class="photo">
+            <img id="EdEditEmployeeDp" class="employee-img" src=""/>
+        </div>
+        <label for="EdChangeDp" class="change-btn">
+            change
+            <input id="EdChangeDp" type="file"/>
+        </label>
+    </div>
+
+<div class="row pt-3">
+    <div class="col-sm-12 col-md-2 col-lg-2">
+        <label class="labels" for="editSalutation"><span id="valEDSal" class="validation">This field is required </span>Salutation</label>
+        <select id="editSalutation" class="form-select text-color color" aria-label="Default select example">
+            <option value="" selected>select</option>
+            <option value="Mr.">Mr</option>
+            <option value="Ms.">Ms</option>
+            <option value="Mrs.">Mrs</option>
+            <option value="Dr.">Dr</option>
+        </select>
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-5 firstName">
+        <label class="labels" for="editFirstName"><span id="valEDFN" class="validation">This field is required </span>First Name</label>
+        <div class="input-group flex-nowrap">
+            <input onkeyup="removeValMessage('editFirstName','valEDFN')" id="editFirstName" type="text" class="form-control color" placeholder="Prichith" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-5 lastName">
+        <label class="labels" for="editLastName"><span id="valEDLN" class="validation">This field is required </span>Last Name</label>
+        <div class="input-group flex-nowrap">
+            <input onkeyup="removeValMessage('editLastName','valEDLN')" id="editLastName" type="text" class="form-control color" placeholder="C P" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editUsername"><span id="valEDUN" class="validation">This field is required </span>User Name</label>
+        <div class="input-group flex-nowrap">
+            <input onkeyup="removeValMessage('editUsername','valEDUN')" id="editUsername" type="text" class="form-control color" placeholder="Enter user name" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 mobile">
+        <label class="labels" for="editpassword"><span id="valEDPass" class="validation">This field is required </span>Password</label>
+        <div class="input-group flex-nowrap">
+            <input onkeyup="removeValMessage('editpassword','valEDPass')" id="editpassword" type="password" class="form-control color" placeholder="enter password" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editEmail"><span id="valEDEmail" class="validation">This field is required </span>Email Address</label>
+        <div class="input-group flex-nowrap">
+            <input onkeyup="removeValMessage('editEmail','valEDEmail')" id="editEmail" type="email" class="form-control color" placeholder="prichith@gmail.com" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 mobile">
+        <label class="labels" for="editPhone"><span id="valEDMob" class="validation">This field is required </span>Mobile Number</label>
+        <div class="input-group flex-nowrap">
+            <input id="editPhone" type="number" class="form-control color" placeholder="enter mobile number" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editDob"><span id="valEDDob" class="validation">This field is required </span>Date of Birth</label>
+        <div class="input-group flex-nowrap">
+            <input id="editDob" type="date" class="form-control color date" placeholder="select date of birth" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 genderEditForm">
+        <label class="labels"><span id="valEDGender" class="validation">This field is required </span>Gender</label>
+        <div class="pt-2">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input gender-col gender-radio" type="radio" name="gender" id="editMale" value="Male">
+                <label class="form-check-label" for="editMale">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input gender-radio" type="radio" name="gender" id="editFemale" value="Female">
+                <label class="form-check-label" for="editFemale">Female</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-md-12 col-lg-12">
+        <label for="editQualifications">Qualifications</label>
+        <input id="editQualifications" type="text" class="form-control color" placeholder="enter qualifications" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <label for="editAddress" class="labels"><span id="valEDAddress" class="validation">This field is required </span>Address</label>
+        <div class="input-group flex-nowrap">
+            <input onkeyup="removeValMessage('editAddress','valEDAddress')" id="editAddress" type="text" class="form-control color" placeholder="enter address" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editCountry"><span id="valEDCountry" class="validation">This field is required </span>Country</label>
+        <select id="editCountry" class="form-select text-color color" aria-label="Default select example">
+            <option value="" selected>select country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Australia">Australia</option>
+            <option value="UAE">UAE</option>
+        </select>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 state">
+        <label class="labels" for="editState"><span id="valEDState" class="validation">This field is required </span>State</label>
+        <select id="editState" class="form-select text-color color" aria-label="Default select example">
+            <option value="" selected>select state</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Tamil nadu">Tamil nadu</option>
+            <option value="karnataka">karnataka</option>
+            <option value="maharashtra">maharashtra</option>
+        </select>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="editCity"><span id="valEDCity" class="validation">This field is required </span>City</label>
+        <div class="input-group flex-nowrap">
+            <input onkeyup="removeValMessage('editCity','valEDCity')" id="editCity" type="text" class="form-control color" placeholder="enter city" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3 px-4 buttons-div">
+    <div class="gap-2 d-md-flex justify-content-md-end buttons">
+        <button onclick="EdFormCancel()" id="editEmployeeCancel" class="btn me-md-2 cancel button" type="button">Cancel</button>
+        <button onclick="editEmployeeValidation()" id="editEmployeeSave" class="btn btn-primary add-employee button px-4" type="button">Save Changes</button>
+    </div>
+</div>
+</div>

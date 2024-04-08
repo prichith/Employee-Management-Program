@@ -1,0 +1,157 @@
+<div id="addEmployeeId" class="container p-4 col-sm-12 col-md-6 col-lg-6 details det-width addEmployeeform fadeIn">
+    <div class="d-flex align-items-center addEmployeeHead justify-content-between">
+        <h3 class="h3">Add Employee</h3>
+        <span id="addEmployeeClose"><i class="fa-solid fa-xmark"></i></span>
+    </div>
+<form >                             
+<!-- <form action="/addEmployee" method="POST" enctype="multipart/form-data" addEmployeeForm>                              -->
+<!-- <form> -->
+<label id="addEmployeeFormUpload" for="upload" class="upload-div">
+    <i class="bi bi-upload"></i>
+    <h5>Upload Image</h5>
+    <p>PNG, JPG files are allowed</p>
+    <input type="file" id="upload" name="avatar"/>
+</label>
+<!-- image preview -->
+<div id="addEmployeeFormPrev" class="dp-change d-flex align-items-center gap-3"  style="display: none!important;">
+    <div class="photo"><img id="addEmployeeDp" class="employee-img" /></div>
+    <label for="addEmployeeChangedp" class="change-btn">
+        change
+        <input id="addEmployeeChangedp" type="file"/>
+    </label>
+</div>
+<!-- END image preview -->
+<div class="row pt-3">
+    <div class="col-sm-12 col-md-2 col-lg-2">
+        <label class="labels" for="salutation"><span id="valSal" class="validation">This field is required </span>Salutation</label>
+        <select name="salutation" id="salutation" class="form-select text-color color" aria-label="Default select example" style="font-family: 'DM Sans', sans-serif;">
+            <option value="" selected>Select</option>
+            <option value="Mr.">Mr</option>
+            <option value="Ms.">Ms</option>
+            <option value="Mrs.">Mrs</option>
+            <option value="Dr.">Dr</option>
+            <option value="Prof.">Prof</option>
+        </select>
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-5 firstName">
+        <label class="labels" for="firstName"><span id="valFN" class="validation">This field is required </span>First Name</label>
+        <div class="input-group flex-nowrap">
+            <input name="firstname" onkeyup="removeValMessage('firstName','valFN') " id="firstName" type="text" class="form-control color" placeholder="Enter your first name" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-5 lastName">
+        <label class="labels" for="lastName"><span id="valLN" class="validation">This field is required </span>Last Name</label>
+        <div class="input-group flex-nowrap">
+            <input name="lastname" onkeyup="removeValMessage('lastName','valLN')" id="lastName" type="text" class="form-control color" placeholder="Enter your last name" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="username"><span id="valUN" class="validation">This field is required </span>User Name</label>
+        <div class="input-group flex-nowrap">
+            <input name="username" onkeyup="removeValMessage('username','valUN')" id="username" type="text" class="form-control color" placeholder="Enter user name" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 mobile">
+        <label class="labels" for="password"><span id="valPass" class="validation">This field is required </span>Password</label>
+        <div class="input-group flex-nowrap">
+            <input name="password" onkeyup="removeValMessage('password','valPass')" id="password" type="password" class="form-control color" placeholder="Enter password" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="email"><span id="valEmail" class="validation">This field is required </span>Email Address</label>
+        <div class="input-group flex-nowrap">
+            <input name="email" onkeyup="removeValMessage('email','valEmail')" id="email" type="email" class="form-control color" placeholder="prichith@gmail.com" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 mobile">
+        <label class="labels" for="phone"><span id="valMob" class="validation">This field is required </span>Mobile Number</label>
+        <div class="input-group flex-nowrap">
+            <input name="phone" id="phone" type="number" class="form-control color" placeholder="enter mobile number" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="dob"><span id="valDob" class="validation">This field is required </span>Date of Birth</label>
+        <div class="input-group flex-nowrap">
+            <input name="dob" id="dob" type="date" class="form-control date color" placeholder="select date of birth" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels"><span id="valGender" class="validation">This field is required </span>Gender</label>
+        <div class="pt-2">
+            <div class="form-check form-check-inline">
+                <input name="gender" class="form-check-input gender-col gender-radio" type="radio" id="male" value="Male">
+                <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input name="gender" class="form-check-input gender-radio" type="radio"  id="female" value="Female">
+                <label class="form-check-label" for="female">Female</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-md-12 col-lg-12">
+        <label for="qualifications">Qualifications</label>
+        <input name="qualifications" id="qualifications" type="text" class="form-control color" placeholder="enter qualifications" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <label class="labels" for="address"><span id="valAddress" class="validation">This field is required </span>Address</label>
+        <div class="input-group flex-nowrap">
+            <input name="address" onkeyup="removeValMessage('address','valAddress')" id="address" type="text" class="form-control color" placeholder="enter address" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="country"><span id="valCountry" class="validation">This field is required </span>Country</label>
+        <select name="country" id="country" class="form-select text-color color" aria-label="Default select example">
+            <option value="" selected>select country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Australia">Australia</option>
+            <option value="UAE">UAE</option>
+        </select>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 state">
+        <label class="labels" for="state"><span id="valState" class="validation">This field is required </span>State</label>
+        <select name="state" id="state" class="form-select text-color color" aria-label="Default select example">
+            <option value="" selected>select state</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Tamil nadu">Tamil nadu</option>
+            <option value="karnataka">karnataka</option>
+            <option value="maharashtra">maharashtra</option>
+        </select>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <label class="labels" for="city"><span id="valCity" class="validation">This field is required </span>City</label>
+        <div class="input-group flex-nowrap">
+            <input name="city" onkeyup="removeValMessage('city','valCity')" id="city" type="text" class="form-control color" placeholder="enter city" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+    </div>
+</div>
+
+<div class="row pt-3 px-4 buttons-div">
+    <div class="gap-2 d-md-flex justify-content-md-end buttons">
+        <span id="addEmployeeCancel"><button class="btn me-md-2 cancel button" type="button">Cancel</button></span>
+        <span id="addEmployeeAdd" onclick="addEmployeeValidation()" class="btn btn-primary add-employee button px-4" >Add Employee</span>
+    </div>
+</div>
+</form> 
+</div>

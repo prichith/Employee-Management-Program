@@ -1,0 +1,81 @@
+<div class="main">
+    <!-- Header -->
+    <div class="header">
+        <div class="main-heading">
+            <h6>Dashboard / Employees / Employee Details</h6>
+            <h2>Employee Details</h2>
+        </div>
+        <div class="search-bar">
+            <div>
+                <span class="material-symbols-outlined search-icon">search</span>
+                <input type="text" placeholder="Search" />
+            </div>
+            <span class="material-symbols-outlined notification-icon">notifications</span>
+            <img src="/img/search-avatar.png"/>
+        </div>
+    </div>
+    <!-- Employee Details -->
+    <div class="employee-details">
+        <div class="cover-pic-div">
+            <img src="/img/employee-details-bg.png"/>
+            <div class="employee-dp">
+                <img id="employeeDetailsDp" src="" />
+            </div>
+        </div>
+        <div class="employee-name">
+            <h3 id="employeeDetFullName">Mr. Michael Johnson</h3>
+            <h6 id="employeeDetEmail">michaeljohnson@example.com</h6>
+        </div>
+        <div class="employee-details-flex">
+            <div class="gender">
+                <p>Gender</p>
+                <p id="employeeDetGender">Male</p>
+            </div>
+            <div class="gender">
+                <p>Age</p>
+                <p id="employeeDetAge">38</p>
+            </div>
+            <div class="gender">
+                <p>Date of Birth</p>
+                <p id="employeeDetDob">20 December 1985</p>
+            </div>
+        </div>
+        <div class="employee-details-flex">
+            <div class="tel height">
+                <p>Mobile Number</p>
+                <p id="employeeDetPhone">9876543210</p>
+            </div>
+            <div class="tel height">
+                <p>Qualifications</p>
+                <p id="employeeDetQualification">Bachelor's Degree</p>
+            </div>
+        </div>
+        <div class="employee-details-flex">
+            <div class="tel address-size">
+                <p>Address</p>
+                <p id="employeeDetAddress">789 Pine St Dummy Address,Chicago, Texas, USA 123456</p>
+            </div>
+            <div class="tel address-size">
+                <p>Username</p>
+                <p id="employeeDetUsername">michaeljohnson</p>
+            </div>
+        </div>
+
+        <div class="row pt-3 px-4 mt-5">
+            <div class="gap-2 d-md-flex justify-content-md-end buttons">
+                <button onclick="employeeDetDelete()" class="btn me-md-2 delete button" type="button">Delete</button>
+                <button onclick="employeeDetEdit()" class="btn btn-primary add-employee button px-4" type="button">Edit Details</button>
+            </div>
+        </div> 
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2023  All Rights Reserved. Stackup</p>
+        <div>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>
+        </div>
+    </div>
+</div>
+<!-- END Main section -->
+</div>

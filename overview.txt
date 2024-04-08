@@ -1,0 +1,36 @@
+
+project : Employee Management system Application
+
+intoduction : It is a javascript based web application . it allows you to add employee details and provides you the
+            CRUD operation in employee record and data is stored in mongodb database.
+
+keywords : javascript , node.js , express.js , mongodb.
+
+packages installed : express , nodemon , ejs ,body-parser , dotenv , mongoose ,axios , jwtwebtokens etc.
+
+About this project:
+This is a javascript based application which allows you to store employee details and provide crud operation in employee record 
+and data is store in a mongodb database. express.Js, node.Js and ejs engine are used in this project.
+
+An user can signup with fullname,email and password.OTP document with user data is stored in a temperory collection in datase .
+ An OTP generate and it will send to the user via email with nodemailer. User should verify the otp . if OTP verified then user 
+ can access the dashboard and otp document will delete from temperory collection in datase then the data is saved into new 
+ collection "UserSchema". If a user email already registered you can signup again.
+
+ login:
+    when a user login , a json web token is generated and its save in client browser as a cookie. So user can access dashboard 
+    without login next time. Token will delete if user logout from the dashboard.
+
+Avatar upload :
+ Employee avatar is save using multer package. it saves in a folder in server side and the filename will save in 
+the document of that particular employee in database.
+
+validation:
+    you can submit employee form only after the validation. i didnt use the default validation method.
+
+pagination and search operation:
+    I used pagination and search operation in a single route. i used aggregation pipeline for this operation. At first stage i 
+    used match operator. then it sends to facet operator, 2 aggregations are working on it. First one is for Calculating total 
+    number of documents after match operation , second is for slicing the require documents using $skip and $limit operators for 
+    search operation.
+

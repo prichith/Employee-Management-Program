@@ -1,0 +1,81 @@
+<div class="main">
+    <div class="innerMain">
+    <!-- Header -->
+    <div class="header">
+        <div class="main-heading">
+            <h6>Dashboard / Employees</h6>
+            <h2>Employees</h2>
+        </div>
+        <div class="search-bar">
+            <div>
+                <span class="material-symbols-outlined search-icon">search</span>
+                <input onkeyup="searchEmployee()" id="search" type="search" placeholder="Search" />
+            </div>
+            <span class="material-symbols-outlined notification-icon">notifications</span>
+            <img src="/img/search-avatar.png"/>
+        </div>
+    </div>
+    <!-- Employee list -->
+    <div class="employee-list">
+        <div class="list-head">
+            <div class="page">
+                <h3>Employees List</h3>
+                <select id="employeeList" class="list-page">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <p>of 10</p>
+            </div>
+            <button id="addEmployeeOpen">Add Employee</button>
+        </div>
+        <!-- table -->
+        <table class="table">
+            <thead class="table-head">
+                <tr>
+                    <th> <div class="flex"> Sl.No<span class="material-symbols-outlined down-arrow">expand_more</span> </div></th>
+                    <th> <div class="flex"> Name<span class="material-symbols-outlined down-arrow">expand_more</span></th>
+                    <th> <div class="flex"> Email<span class="material-symbols-outlined down-arrow">expand_more</span></th>
+                    <th> <div class="flex"> Phone<span class="material-symbols-outlined down-arrow">expand_more</span></th>
+                    <th> <div class="flex"> Gender<span class="material-symbols-outlined down-arrow">expand_more</span></th>
+                    <th> <div class="flex"> DOB<span class="material-symbols-outlined down-arrow">expand_more</span></th>
+                    <th> <div class="flex"> Country<span class="material-symbols-outlined down-arrow">expand_more</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <div class="pagination-buttons">                  
+            <div class="pagesBox">
+                <span id="prevPage"><i class="fa-solid fa-angle-left"></i></span>
+                <div id="pages" class="pages"></div> 
+                <span id="nextPage"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- END Pagination -->
+    </div>
+    <!-- Footer -->
+     <div class="footer">
+        <p>© 2023  All Rights Reserved. Stackup</p>
+        <div>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>
+        </div>
+    </div>
+<!-- END Footer -->
+ </div>
+<!-- END Main section -->
+</div>
+<!-- END container -->
