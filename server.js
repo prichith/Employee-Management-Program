@@ -7,7 +7,6 @@ const path = require('path')
 const session = require('express-session')
 const connectDB = require('./server/database/connection.js')
 const cookies = require('cookie-parser')
-const flash = require('connect-flash')
 
 app.use(cookies())
 
@@ -34,8 +33,7 @@ app.use('/js',express.static(path.resolve(__dirname,"assets/js")))
 app.use('/img',express.static(path.resolve(__dirname,"assets/img")))
 app.use('/avatars',express.static(path.resolve(__dirname,"assets/img/public/avatars")))
 
-app.use(session({ secret: 'prichith',cookie : {}, resave: false, saveUninitialized: true }))
-app.use(flash())
+app.use(session({ secret: process.env.JWT_Secret ,cookie : {}, resave: false, saveUninitialized: true }))
 
 // load routers
 app.use('/', require('./server/routes/usersRouter.js'))
