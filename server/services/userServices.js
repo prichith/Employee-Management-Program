@@ -3,6 +3,12 @@ const Otp = require('../model/otp')
 var {generateOTP} = require('../email/generateOTP')
 const bcrypt = require('bcrypt')
 var sendEmail = require('../email/storeAndSendOTP')
+const path = require('path')
+const dotenv = require('dotenv')
+
+//load env variables
+dotenv.config({path:'config.env'}) // merges them into the "process.env" object
+const MAIL_ID = process.env.AUTH_EMAIL;
 
 exports.userExist = async (query)=>{
     let result = await User.findOne(query);
@@ -22,7 +28,7 @@ exports.saveOTPForVerification = async(Userfullname,Useremail,Userpassword)=>{
     await user.save();
   // send OTP to user via mail
   let mailOptions = {
-      from: 'prichith@outlook.com', 
+      from: MAIL_ID, 
       to: Useremail, 
       subject: 'OTP', 
       text: `Your one time password is ${otpToken}`
